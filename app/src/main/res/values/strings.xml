@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Registor_Login</string>
     <string name="mainId_name">登录注册</string>
-    <string name="register">注册</string>
+    <string name="register">注 册</string>
     <string name="Login">登录</string>
+    <string name="username">账号:</string>
+    <string name="password">密码:</string>
+    <string name="inputUsername">请输入账号</string>
+    <string name="inputPassword">请输入密码</string>
 </resources>

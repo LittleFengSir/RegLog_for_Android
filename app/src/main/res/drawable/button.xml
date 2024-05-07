@@ -1,5 +1,5 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#9F0D47A1"/> <!-- 按钮颜色 -->
+    <solid android:color="#FF0000"/> <!-- 按钮颜色 -->
     <corners android:radius="30dp"/> <!-- 圆角半径 -->
-<!--    <stroke android:width="0dp" android:color="#000000"/> &lt;!&ndash; 可选：边框 &ndash;&gt;-->
+    <stroke android:width="0dp" android:color="#000000"/> <!-- 可选：边框 -->
 </shape>

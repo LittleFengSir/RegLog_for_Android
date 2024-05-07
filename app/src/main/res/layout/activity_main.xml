@@ -3,16 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bk">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/mainId_name"
-        android:textSize="50sp"
+        android:layout_marginTop="60dp"
         android:gravity="center_horizontal"
-        android:layout_marginTop="220dp"
-        android:textColor="#3949AB"
+        android:text="@string/mainId_name"
+        android:textColor="#57250E"
+        android:textSize="50sp"
         android:textStyle="bold"
-        >
+        android:typeface="sans">
 
     </TextView>
 
@@ -22,24 +23,26 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="60dp"
-        android:background="@drawable/button"
+        android:layout_marginBottom="90dp"
+        android:background="#FF0000"
         android:text="@string/Login"
-
+        android:textColor="#FFFFFF"
         android:textSize="25sp">
 
     </Button>
 
     <Button
-        android:id="@+id/btn_reg"
+        android:id="@+id/btn_register"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:text="@string/register"
-        android:textSize="25sp"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/button"
-        >
+        android:text="@string/register"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp">
+
     </Button>
 
 </RelativeLayout>

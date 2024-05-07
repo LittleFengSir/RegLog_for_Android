@@ -5,6 +5,9 @@
     <string name="Login">登录</string>
     <string name="username">账号:</string>
     <string name="password">密码:</string>
+    <string name="passwordAgain">确认密码：</string>
     <string name="inputUsername">请输入账号</string>
     <string name="inputPassword">请输入密码</string>
+    <string name="inputPasswordAgain">请再次输入密码</string>
+    <string name="btnBack">返回</string>
 </resources>

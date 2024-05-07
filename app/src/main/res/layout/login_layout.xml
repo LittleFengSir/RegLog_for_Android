@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/register"
+        android:text="@string/Login"
         android:textSize="50sp"
         android:layout_centerHorizontal="true"
         android:gravity="center"
@@ -67,54 +67,27 @@
         >
     </EditText>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="340dp"
-        android:text="@string/passwordAgain"
-        android:textColor="#57250E"
-        android:textSize="25sp"
-        android:textStyle="bold">
-
-    </TextView>
-
-    <EditText
-        android:layout_width="280dp"
-        android:layout_height="50dp"
-        android:inputType="textPassword"
-        android:hint="@string/inputPasswordAgain"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:background="#50BC7A4D"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="330dp"
-        >
-    </EditText>
-
-
     <android.widget.Button
-        android:id="@+id/btn_regMenu"
+        android:id="@+id/btn_loginMenu"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button"
-        android:text="@string/register"
+        android:text="@string/Login"
         android:textSize="25sp"
-        android:layout_marginTop="445dp"
+        android:layout_marginTop="380dp"
         >
     </android.widget.Button>
 
     <android.widget.Button
-        android:id="@+id/btn_regBackMenu"
+        android:id="@+id/back_loginMenu"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button"
         android:text="@string/btnBack"
         android:textSize="25sp"
-        android:layout_marginTop="505dp"
+        android:layout_marginTop="440dp"
         >
     </android.widget.Button>
-
 </RelativeLayout>

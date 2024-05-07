@@ -7,33 +7,34 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="80dp"
         android:gravity="center_horizontal"
         android:text="@string/mainId_name"
         android:textColor="#57250E"
         android:textSize="50sp"
         android:textStyle="bold"
+        android:background="#00FFFFFF"
         android:typeface="sans">
 
     </TextView>
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btn_login"
-        android:layout_width="320dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="90dp"
-        android:background="#FF0000"
+        android:background="@drawable/button"
         android:text="@string/Login"
         android:textColor="#FFFFFF"
         android:textSize="25sp">
 
-    </Button>
+    </android.widget.Button>
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btn_register"
-        android:layout_width="320dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
@@ -43,6 +44,6 @@
         android:textColor="#FFFFFF"
         android:textSize="25sp">
 
-    </Button>
+    </android.widget.Button>
 
 </RelativeLayout>

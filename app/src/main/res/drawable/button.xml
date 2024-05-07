@@ -1,5 +1,19 @@
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#FF0000"/> <!-- 按钮颜色 -->
-    <corners android:radius="30dp"/> <!-- 圆角半径 -->
-    <stroke android:width="0dp" android:color="#000000"/> <!-- 可选：边框 -->
-</shape>
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#57250E"/>
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#A157250E"
+                android:endColor="#A157250E"
+                android:angle="0"/>
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+</selector>

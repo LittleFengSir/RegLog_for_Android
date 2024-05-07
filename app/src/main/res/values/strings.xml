@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Registor_Login</string>
+    <string name="mainId_name">登录注册</string>
+    <string name="register">注册</string>
+    <string name="Login">登录</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mainId_name"
+        android:textSize="50sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="220dp"
+        android:textColor="#3949AB"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/button"
+        android:text="@string/Login"
+
+        android:textSize="25sp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btn_reg"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button"
+        >
+    </Button>
+
+</RelativeLayout>

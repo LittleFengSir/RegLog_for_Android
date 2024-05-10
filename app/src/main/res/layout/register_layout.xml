@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bk">
+    android:background="@drawable/bk_reg">
 
     <TextView
         android:layout_width="match_parent"
@@ -12,7 +12,7 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:textColor="#57250E"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         >
     </TextView>
 
@@ -30,6 +30,7 @@
     </TextView>
 
     <EditText
+        android:id="@+id/regInput_username"
         android:layout_width="290dp"
         android:layout_height="50dp"
         android:inputType="text"
@@ -55,6 +56,7 @@
     </TextView>
 
     <EditText
+        android:id="@+id/regInput_password"
         android:layout_width="290dp"
         android:layout_height="50dp"
         android:inputType="textPassword"
@@ -80,6 +82,7 @@
     </TextView>
 
     <EditText
+        android:id="@+id/regInput_pwdAgain"
         android:layout_width="280dp"
         android:layout_height="50dp"
         android:inputType="textPassword"
@@ -101,7 +104,7 @@
         android:background="@drawable/button"
         android:text="@string/register"
         android:textSize="25sp"
-        android:layout_marginTop="445dp"
+        android:layout_marginTop="455dp"
         >
     </android.widget.Button>
 
@@ -113,7 +116,7 @@
         android:background="@drawable/button"
         android:text="@string/btnBack"
         android:textSize="25sp"
-        android:layout_marginTop="505dp"
+        android:layout_marginTop="515dp"
         >
     </android.widget.Button>
 

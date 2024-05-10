@@ -1,9 +1,7 @@
 package com.example.registor_login;
 
 import android.content.ContentValues;
-import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -39,32 +37,11 @@ public class Register_Activity extends AppCompatActivity implements View.OnClick
     }
 
     private void getData() {
-        username = inputUsername.getText().toString().trim();
-        password = inputPassword.getText().toString().trim();
-        pwdAgain = inputPwdAgain.getText().toString().trim();
+        username = inputUsername.getText().toString();
+        password = inputPassword.getText().toString();
+        pwdAgain = inputPwdAgain.getText().toString();
     }
 
-    public static class MyDatabaseHelper extends SQLiteOpenHelper{
-        private static final String DATABASE_NAME = "userInfo.db";
-        private static final int DATABASE_VERSION = 1;
-
-        public MyDatabaseHelper(Context context){
-            super(context,DATABASE_NAME,null,DATABASE_VERSION);
-        }
-        @Override
-        public void onCreate(SQLiteDatabase db){
-            String CREATE_TABLE_MY_DATA = "CREATE TABLE userInfo (" +
-                    "username TEXT NOT NULL," +
-                    "password TEXT NOT NULL" + ")";
-            db.execSQL(CREATE_TABLE_MY_DATA);
-        }
-        @Override
-        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
-            db.execSQL("DROP TABLE IF EXISTS userInfo");
-            onCreate(db);
-        }
-
-    }
 
     public void showAlertDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(Register_Activity.this);
@@ -73,6 +50,7 @@ public class Register_Activity extends AppCompatActivity implements View.OnClick
                 .setMessage("账号：" + username + "\n" + "密码：" + password);
         builder.setPositiveButton("确定", (dialog, which) -> {
             Toast.makeText(Register_Activity.this, "您点击了确认按钮", Toast.LENGTH_SHORT).show();
+
             MyDatabaseHelper dbHelper = new MyDatabaseHelper(this);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
             ContentValues values = new ContentValues();
@@ -90,7 +68,6 @@ public class Register_Activity extends AppCompatActivity implements View.OnClick
         dialog.show();
     }
 
-
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btn_regMenu) {
@@ -106,7 +83,6 @@ public class Register_Activity extends AppCompatActivity implements View.OnClick
             } else {
                 showAlertDialog();
             }
-
 
         } else if (v.getId() == R.id.btn_regBackMenu) {
             finish();

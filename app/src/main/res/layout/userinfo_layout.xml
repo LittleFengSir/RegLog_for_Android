@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk_login">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/userInfoTitle"
+        android:textSize="50sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="#57250E"
+        android:layout_marginTop="40dp"
+        >
+    </TextView>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/userimage"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="30dp"
+        />
+    <TextView
+        android:id="@+id/userInfo_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/usernameInfo"
+        android:textSize="20sp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="160dp"
+        />
+    <TextView
+        android:id="@+id/userInfo_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/passwordInfo"
+        android:textSize="20sp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="200dp"
+        />
+
+    <android.widget.Button
+        android:id="@+id/userInfo_btn_back"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button"
+        android:text="@string/btnBack"
+        android:textSize="25sp"
+        android:layout_marginTop="510dp"
+        >
+    </android.widget.Button>
+</RelativeLayout>

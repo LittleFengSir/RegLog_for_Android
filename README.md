@@ -10,8 +10,8 @@
 使用了SQLite数据库对数据进行保存
 
 # 开发环境：
-Abdriud SDK版本：34
-Android Studio版本：Jellyfish | 2023.3.1
-Gradle 版本: 8.6
+Abdriud SDK版本：34<br />
+Android Studio版本：Jellyfish | 2023.3.1<br />
+Gradle 版本: 8.6<br />
 
 

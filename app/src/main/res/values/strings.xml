@@ -10,4 +10,7 @@
     <string name="inputPassword">请输入密码</string>
     <string name="inputPasswordAgain">请再次输入密码</string>
     <string name="btnBack">返回</string>
+    <string name="userInfoTitle">用户信息</string>
+    <string name="usernameInfo">账号: %s</string>
+    <string name="passwordInfo">密码: %s</string>
 </resources>

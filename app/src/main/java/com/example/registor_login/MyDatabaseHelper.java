@@ -16,7 +16,8 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(android.database.sqlite.SQLiteDatabase db) {
         String CREATE_TABLE_MY_DATA = "CREATE TABLE userInfo (" +
                 "username TEXT NOT NULL," +
-                "password TEXT NOT NULL" + ")";
+                "hash TEXT NOT NULL," +
+                "salt TEXT NOT NULL" +")";
         db.execSQL(CREATE_TABLE_MY_DATA);
     }
 

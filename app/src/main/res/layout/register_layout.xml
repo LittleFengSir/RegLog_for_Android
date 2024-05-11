@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/register"
+        android:text="@string/registerTitle"
         android:textSize="50sp"
         android:layout_centerHorizontal="true"
         android:gravity="center"
@@ -66,6 +66,7 @@
         android:background="#50BC7A4D"
         android:layout_marginStart="90dp"
         android:layout_marginTop="260dp"
+        android:autofillHints=""
         >
     </EditText>
 
@@ -102,7 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button"
-        android:text="@string/register"
+        android:text="@string/registerBtn"
         android:textSize="25sp"
         android:layout_marginTop="455dp"
         >

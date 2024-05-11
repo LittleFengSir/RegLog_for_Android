@@ -78,10 +78,21 @@ public class Login_Activity extends AppCompatActivity implements
                 String query = "SELECT * FROM userInfo WHERE username = ?";
                 String[] selectionArgs = {username};
                 Cursor cursor = db.rawQuery(query,selectionArgs);
-
+                String salt = null,storedHash = null;
                 if(cursor.moveToFirst()){
-                    String salt = cursor.getString(cursor.getColumnIndex("salt"));
-                    String storedHash = cursor.getString(cursor.getColumnIndex("hash"));
+                    int columnIndex = cursor.getColumnIndex("salt");
+                    if(columnIndex != -1){
+                        salt = cursor.getString(columnIndex);
+                    } else {
+                        Toast.makeText(this,"数据库数据丢失!",Toast.LENGTH_SHORT).show();
+                    }
+                    columnIndex = cursor.getColumnIndex("hash");
+                    if(columnIndex != -1){
+                        storedHash = cursor.getString(columnIndex);
+                    }else{
+                        Toast.makeText(this,"数据库数据丢失!",Toast.LENGTH_SHORT).show();
+                    }
+
                     try {
                         if(PasswordHashing.verifyPassword(password,storedHash,salt)){
                             Toast.makeText(this,"登录成功！",Toast.LENGTH_SHORT).show();

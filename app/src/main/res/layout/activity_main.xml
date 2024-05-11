@@ -8,13 +8,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
+        android:background="#00FFFFFF"
         android:gravity="center_horizontal"
         android:text="@string/mainId_name"
         android:textColor="#57250E"
         android:textSize="50sp"
-        android:textStyle="bold"
-        android:background="#00FFFFFF"
-        android:typeface="sans">
+        android:textStyle="bold">
 
     </TextView>
 

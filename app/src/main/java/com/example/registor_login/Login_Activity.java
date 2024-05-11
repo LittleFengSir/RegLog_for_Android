@@ -9,7 +9,13 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 
 public class Login_Activity extends AppCompatActivity implements
         View.OnClickListener{
@@ -35,6 +41,29 @@ public class Login_Activity extends AppCompatActivity implements
         password = inputPassword.getText().toString();
     }
 
+    public static class PasswordHashing{
+
+        public static String hashPasswordWithSalt(String password, String salt) throws NoSuchAlgorithmException {
+            String saltedPassword = password + salt;
+
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            md.update(saltedPassword.getBytes(StandardCharsets.UTF_8));
+
+            byte[] digest = md.digest();
+            StringBuilder sb = new StringBuilder();
+            for(byte b : digest){
+                sb.append(String.format("%02x",b & 0xff));
+            }
+            return sb.toString();
+        }
+        public static boolean verifyPassword(String password,String storedHash,String salt) throws NoSuchAlgorithmException{
+
+            String hashedPassword = hashPasswordWithSalt(password,salt);
+
+            return hashedPassword.equals(storedHash);
+        }
+    }
+
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.btn_loginMenu){
@@ -46,16 +75,24 @@ public class Login_Activity extends AppCompatActivity implements
             }else {
                 MyDatabaseHelper dbHelper = new MyDatabaseHelper(this);
                 SQLiteDatabase db = dbHelper.getReadableDatabase();
-                String query = "SELECT * FROM userInfo WHERE username = ? AND password = ?";
-                String[] selectionArgs = {username,password};
+                String query = "SELECT * FROM userInfo WHERE username = ?";
+                String[] selectionArgs = {username};
                 Cursor cursor = db.rawQuery(query,selectionArgs);
 
                 if(cursor.moveToFirst()){
-                    Toast.makeText(this,"登录成功！",Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Login_Activity.this, UserInfo_Activity.class);
-                    intent.putExtra("username",username);
-                    intent.putExtra("password",password);
-                    startActivity(intent);
+                    String salt = cursor.getString(cursor.getColumnIndex("salt"));
+                    String storedHash = cursor.getString(cursor.getColumnIndex("hash"));
+                    try {
+                        if(PasswordHashing.verifyPassword(password,storedHash,salt)){
+                            Toast.makeText(this,"登录成功！",Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(Login_Activity.this, UserInfo_Activity.class);
+                            intent.putExtra("username",username);
+                            intent.putExtra("password",password);
+                            startActivity(intent);
+                        }
+                    } catch (NoSuchAlgorithmException e) {
+                        Toast.makeText(this,"登录失败！内部错误",Toast.LENGTH_SHORT).show();
+                    }
                 }else{
                     Toast.makeText(this,"账号或密码错误！",Toast.LENGTH_SHORT).show();
                 }

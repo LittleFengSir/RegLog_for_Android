@@ -9,7 +9,7 @@
 使用了SQLite数据库对数据进行保存<br />
 
 # 开发环境：
-Abdroid SDK版本：34<br />
+Abdroid SDK最低要求版本：API 28<br />
 Android Studio版本：Jellyfish | 2023.3.1<br />
 Gradle 版本: 8.6<br />
 

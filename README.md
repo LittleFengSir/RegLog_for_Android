@@ -15,7 +15,7 @@ Abdroid SDK最低要求版本：API 28<br />
 Android Studio版本：Jellyfish | 2023.3.1<br />
 Gradle 版本: 8.6<br />
 
-#版权声明
+# 版权声明
 本项目所用到的图片，版权归原作者所有
 
 
